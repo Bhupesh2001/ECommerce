@@ -1,0 +1,74 @@
+<div class="px-5 col-12" style="margin-top: 5rem">
+  <h1 class="mx-auto text-center mb-5">ADD PRODUCT</h1>
+  <form class="col-7 mx-auto mt-5" (submit)="addProduct()">
+    <div class="d-flex col-12 my-3">
+      <!-- <label for="name">Name:</label> -->
+      <input
+        type="text"
+        placeholder="Product Name"
+        name="name"
+        id="name"
+        style="flex: 2; border: 1px solid #fffa"
+        class="mx-3 bg-transparent rounded p-2 text-light"
+        [(ngModel)]="product.name"
+        required
+      />
+      <!-- <label for="price">Price:</label> -->
+      <input
+        type="number"
+        placeholder="Price"
+        name="price"
+        id="price"
+        style="flex: 1; border: 1px solid #fffa"
+        class="mx-3 bg-transparent rounded p-2 text-light"
+        [(ngModel)]="product.price"
+        required
+      />
+    </div>
+    <div class="d-flex col-12 my-3">
+      <!-- <label for="description">Description:</label> -->
+      <textarea
+      placeholder="Description"
+      name="description"
+      id="description"
+      style="flex: 3; border: 1px solid #fffa"
+      class="mx-3 bg-transparent rounded p-2 text-light"
+      [(ngModel)]="product.description"
+      required
+      ></textarea>
+    </div>
+    <div class="d-flex col-12 my-3">
+      <input
+        type="text"
+        placeholder="Image Url"
+        name="image"
+        id="image"
+        style="flex: 2; border: 1px solid #fffa;"
+        class="mx-3 bg-transparent rounded p-2 text-light"
+        [(ngModel)]="product.url"
+        required
+      />
+    </div>
+    <input
+      type="submit"
+      value="Add Product"
+      style="border: 1px solid #fffa"
+      class="mx-3 mt-5 rounded p-2 col-4 d-block btn btn-primary"
+      required
+    />
+    <h4
+      *ngIf="error"
+      style="text-align: center"
+      class="alert-danger p-2 m-5 rounded"
+    >
+      {{ error }}
+    </h4>
+    <h4
+      *ngIf="success"
+      style="text-align: center"
+      class="alert-success p-2 m-5 rounded"
+    >
+      {{ success }}
+    </h4>
+  </form>
+</div>

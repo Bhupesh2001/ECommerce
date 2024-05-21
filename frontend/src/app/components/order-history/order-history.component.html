@@ -1,0 +1,21 @@
+<div style="height: 100px"></div>
+<div class="container" style="width: 75%;">
+<table class="table table-dark table-striped table-hover table-borderless">
+  <thead>
+    <tr>
+      <th>Order Date</th>
+      <th>Total Amount</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orderHistories">
+      <td>{{ order.orderDate | date : 'dd MMMM yy  hh:mm a'}}</td>
+      <td>₹ {{ order.totalAmount }}</td>
+      <td>
+        <button class="btn btn-secondary" (click)="showDetails(order.orderId)">Order Details</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

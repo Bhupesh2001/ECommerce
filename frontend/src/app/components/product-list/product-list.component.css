@@ -1,0 +1,11 @@
+.btn-secondary:hover {
+  background-color: #5a6268; /* Darken secondary color */
+  border-color: #5a6268; /* Darken secondary color */
+}
+
+/* Custom CSS for floating button */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
